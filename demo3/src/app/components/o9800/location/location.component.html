@@ -1,0 +1,152 @@
+<div>
+<div id="leftarea"> 
+    <br>
+     选择交叉板:<nz-radio-group [(ngModel)]="radioValue">        
+        <label nz-radio nzValue="A" (click)="ThisOne()"> TNS1UXCS</label>
+        <label nz-radio nzValue="B" (click)="Another()">TNS1XCS</label>
+    </nz-radio-group>
+    <br>
+
+    <button nz-button nzType="dashed"(click)="clear()" id="btn"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 清 空</button>
+    <br><br>
+    
+     <div id="l1">TNS1FAN</div>
+     <div id="l2">TNS1FAN</div>
+     
+     <div id="s1" (click)="addOne()"> <span>{{this.dataSet[0] == undefined ? "" : this.dataSet[0].name}}</span></div>
+     <div id="s2" (click)="addOne()"> <span>{{this.dataSet[1] == undefined ? "" : this.dataSet[1].name}}</span></div>
+     <div id="s3" (click)="addOne()"> <span>{{this.dataSet[2] == undefined ? "" : this.dataSet[2].name}}</span></div>
+     <div id="s4" (click)="addOne()"> <span>{{this.dataSet[3] == undefined ? "" : this.dataSet[3].name}}</span></div>
+     <div id="s5" (click)="addOne()"> <span>{{this.dataSet[4] == undefined ? "" : this.dataSet[4].name}}</span></div>
+     <div id="s6" (click)="addOne()"> <span>{{this.dataSet[5] == undefined ? "" : this.dataSet[5].name}}</span></div>
+     <div id="s7" (click)="addOne()"> <span>{{this.dataSet[6] == undefined ? "" : this.dataSet[6].name}}</span></div>
+     <div id="s8" (click)="addOne()"> <span>{{this.dataSet[7] == undefined ? "" : this.dataSet[7].name}}</span></div>
+     <div id="s9" (click)="addOne()"> <span>{{this.dataSet[8] == undefined ? "" : this.dataSet[8].name}}</span></div>
+     <div id="s10" (click)="addOne()"><span>{{this.dataSet[9] == undefined ? "" : this.dataSet[9].name}}</span></div>
+     <div id="s11" (click)="addOne()"><span>{{this.dataSet[10] == undefined ? "" : this.dataSet[10].name}}</span></div>
+     <div id="s12" (click)="addOne()"><span>{{this.dataSet[11] == undefined ? "" : this.dataSet[11].name}}</span></div>
+     <div id="s13" (click)="addOne()"><span>{{this.dataSet[12] == undefined ? "" : this.dataSet[12].name}}</span></div>
+     <div id="s14" (click)="addOne()"><span>{{this.dataSet[13] == undefined ? "" : this.dataSet[13].name}}</span></div>
+     <div id="d1"><span>TNS1PIU</span></div>
+     <div id="d2"><span>TNS1PIU</span></div>
+     <div id="d3"><span>TNS1CTU</span></div>
+     <div id="d4"><span>TNS1UXCS</span></div>
+     <div id="d5"><span>TNS1UXCS</span></div>
+     <div id="d6"><span>TNS1UXCS</span></div>
+     <div id="d7"><span>TNS1UXCS</span></div>
+     <div id="d8"><span>TNS1UXCS</span></div>
+     <div id="d9"><span>TNS1UXCS</span></div>
+     <div id="d10"><span>TNS1XCS</span></div>
+     <div id="d11"><span>TNS1CTU</span></div>
+     <div id="d12"><span>TNS1EF1</span></div>
+     <div id="d13"><span>TNS1PIU</span></div>
+     <div id="d14"><span>TNS1PIU</span></div>
+</div>
+<div id="rightarea">
+    <span id=name>OSN 9800 O16子架</span>
+    <hr><div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default" (click)='calculate()'><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>计算</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default" (click)='toPicture()'><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>导出配置图</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default" (click)='tableToExcel()'><span class="glyphicon glyphicon-share" aria-hidden="true"></span>导出配置单</button>
+        </div>
+      </div>
+    <div id='result'>
+      <h1 style="width:100%;color:black;font-weight:900;font-size: 25px">
+        功耗、重量、热耗
+      </h1>
+      <nz-table #basicTable [nzData]="dataSet" nzNoResult=" " nzHideOnSinglePage=true>
+        <tr>
+  
+          <th>典型功耗(W)</th>
+          <th>最大功耗(W)</th>
+          <th>最大热耗(W)</th>
+          <th>重量(KG)</th>
+        </tr>
+        <tr>
+          <th>{{c_dgh}}</th>
+          <th>{{c_max_gh}}</th>
+          <th>{{c_weight}}</th>
+          <th>{{c_weight}}</th>
+        </tr>
+      </nz-table>
+      <hr>
+      <div id="details" style="text-align:center"> <button nz-button nzType="default" nzBlock (click)='LookDetails()'>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>  点击查看子架配置详情</button></div>
+    </div>
+    
+        <nz-table #editRowTable nzBordered [nzData]="dataSet" id='tab' nzPageSize=5> 
+                <thead>
+                  <tr>
+                      <th>槽位</th>
+                    <th nzWidth="20%">单板名称</th>
+                    <th>典型功耗(W)</th>
+                    <th>最大功耗(W)</th>
+                    <th>重量(KG)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of editRowTable.data,let in = index">
+                      <td>{{in}}</td>
+                    <td>
+                      <div class="editable-cell">
+                        <div class="editable-cell-text-wrapper">
+                            {{data.name}}--{{in}}
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>{{data.dgh}}</td>
+                    <td>{{data.max_gh}}</td>
+                    <td>{{data.weight}}</td>
+            
+                  
+                  </tr>
+                </tbody>
+              </nz-table>
+              
+
+
+</div>
+  <div  id="addForm" style="display:none"  >
+    <div id="head"><button (click)='close()' style="float:right" nz-button nzType="default" nzGhost=true><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span></button></div>
+    <br>
+    <!-- <select id="sel">
+      <option value ="1号单板" selected="selected">1号单板</option>    
+      <option value ="2号单板">2号单板</option>
+      <option value="3号单板">3号单板</option>
+      <option value="4号单板">4号单板</option>
+      <option value="5号单板">6号单板</option>
+    </select> -->
+    <div id="mid">
+      <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear  nzShowSearch  nzPlaceHolder="请选择单板........">
+        <nz-option
+        *ngFor="let item of dataSet1,let in = index"
+        [nzLabel]="item.name"
+        [nzValue]="item.name"
+        >
+  
+      </nz-option>
+      </nz-select>
+  </div>
+    <!-- <button (click)='addthis()'>点击添加单板数据</button> -->
+    <button (click)='adddata()' class="btn btn-danger" style="margin:10% 20% auto 25%">确定</button>
+    <button (click)='close()' class="btn btn-default" style="margin:10% 10% auto auto">取消</button>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button class="btn btn-default" (click)='addOptions()'>点击获取后台数据</button>
+    <!-- <a href="javascript:alert('清除缓存成功')" >清除缓存</a> -->
+  </div>
+  <div id="picture" style="display:none">
+    <div id="pichead"><span>子架配置图</span><button (click)='closePicture()' style="float:right" nz-button nzType="default" nzGhost=true><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span></button></div>
+    <br><br>
+    <h2>温馨提示：右键保存图片到本地</h2>
+    <div id="picmid"></div>
+  </div>

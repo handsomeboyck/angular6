@@ -1,0 +1,28 @@
+#biao1{
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.imag{
+    margin-left: 1300px;
+  
+    color: red;
+    text-align: right;
+   
+}
+.logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(255,255,255,.2);
+    margin: 16px 24px 16px 0;
+    float: left;
+  }
+
+#home_imag
+{
+    width: 100%;
+    height: 15%;
+    border-radius: 20px;
+}
+
+

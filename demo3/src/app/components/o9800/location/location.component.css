@@ -1,0 +1,477 @@
+#leftarea
+{
+ float: left;
+
+  width:40%;
+  height:550px;
+  border:1px solid #460088;
+  background-color: rgb(102,98,114);
+}
+#rightarea
+{
+ 
+ float: right;
+  width:50%;
+  height:500px;
+  background-color: #fff;
+  border-bottom-color:transparent;
+}
+#l1
+{
+  border:1px solid #a9a7ac;
+  height: 6%;
+  width:98%;
+  margin: auto;
+ background-color: rgb(255,255,255);
+ text-align: center;
+ font-size: 20px;
+ font-weight: bold;
+ 
+ 
+  
+}
+#l2
+{
+  border:1px solid #8c829c;
+  height: 6%;
+  width:98%;
+  margin: auto;
+ background-color: rgb(255,255,255);
+ text-align: center;
+ font-size: 20px;
+ font-weight: bold;
+}
+#s1
+{
+  margin-left: 1%;
+}
+
+#s1,#s2,#s3,#s4,#s5,#s6,#s7,#s8,#s9,#s10,#s11,#s12,#s13,#s14
+{
+  margin-top: 3%;
+  float: left;
+  width: 7%;
+  height: 50%;
+  border:1px solid #8c829c;
+  background-color:rgb(255,255,255);
+}
+#s1 span
+{ 
+/* writing-mode:tb-rl;  测试与ie浏览器不兼容*/
+/* Firefox */
+/* -moz-transform: rotate(90deg); */
+/* IE */
+/* -ms-transform: rotate(90deg); */
+/* Opera */
+/* -o-transform: rotate(90deg); */
+/* Internet Explorer */
+display:block;
+transform: rotate(90deg); 
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+line-height:20px;
+font-size:20px;
+font-weight: bold; 
+white-space:nowrap;
+margin-top:80px;
+
+
+}
+#s2 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s3 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s4 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s5 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s6 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s7 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s8 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s9 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s10 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s11 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s12 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s13 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+#s14 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:20px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:80px;
+}
+
+#d1,#d2,#d3,#d4,#d5,#d6,#d7,#d8,#d9,#d10,#d11,#d12,#d13,#d14
+{
+  margin-top: 2%;
+  float: left;
+  width: 7%;
+  height: 15%;
+  border:1px solid #8c829c;
+  background-color:rgb(255,255,255);
+  
+}
+#d1 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d2 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d3 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d4 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d5 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d6 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d7 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d8 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d9 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d10 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d11 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d12 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d13 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d14 span
+{
+  display:block;
+  transform: rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  line-height:20px;
+  font-size:14px;
+  font-weight: bold; 
+  white-space:nowrap;
+  margin-top:15px;
+}
+#d1
+{
+  margin-left: 1%;
+}
+#addForm
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-150px 0 0 -200px;
+  width:400px;
+  height:300px;
+  border:2px solid;
+  background-color: #fff;
+  border-radius:8px ;
+  box-shadow: 10px 10px 5px #888888;
+}
+#btn
+{
+  
+  float: right;
+  border:1px solid #8c829c;
+}
+.btn1
+{
+  height: auto;
+  width: 100%;
+}
+#test
+{
+  font-size: 50px;
+  transform:rotate(-90deg);
+}
+#name
+{
+  font-weight: bold;
+}
+#tab
+{
+  display: none;
+}
+#head
+{
+ height: 11%;
+ background-color: rgb(220,221,221);
+}
+#mid
+{
+ height: 11%;
+ text-align: center;
+}
+#picture
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-150px 0 0 -900px;
+  width:800px;
+  height:700px;
+  border:2px solid;
+  background-color: #fff;
+  border-radius:8px ;
+  box-shadow: 10px 10px 5px #888888;
+}
+#pichead
+{
+  height: 5%;
+  background-color: rgb(220,221,221);
+}
+#picmid
+{
+  margin: auto;
+  width: 700px;
+  height: 600px;
+}
+#pichead span
+{
+  font-weight: bold;
+  font-size: 20px;
+}
+#remian
+{
+  text-align: center;
+}
+h2
+{
+  text-align: center;
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,44 @@
+<span id="biao1"> <i class="anticon anticon-android"></i>HUAWEI</span>
+
+
+<span class="imag">
+  <i class="anticon anticon-home"></i>
+  <a href="src/app/test.html">首页</a>
+  <i class="anticon anticon-form"></i>反馈
+  <i class="anticon anticon-link"></i>分享
+</span>
+
+<h1 style="width:100%;text-align:center;color:black;font-weight:900;font-size: 35px">
+  <font style="color:red">
+     波分
+  </font>
+  <font>
+     硬件配置助手
+  </font>
+
+</h1>
+<h2 style="text-align: center;font-size: 10px;color: dimgray">
+  配置图、功耗、重量、一键轻松搞定
+</h2>
+
+<img src="src\app\img\home.png" alt="home" id='home_imag'>
+
+
+
+<nz-layout class="layout">
+  <nz-header>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item> <a routerLink="/osn902" routerLinkActive="active">OSN902</a></li>
+      <li nz-menu-item> <a routerLink="/o9800" routerLinkActive="active">9800</a></li>
+      <li nz-menu-item> <a routerLink="/o8800" routerLinkActive="active">8800</a></li>
+      <li nz-menu-item> <a routerLink="/o1800" routerLinkActive="active">1800</a></li>
+    </ul>
+  </nz-header>
+  <nz-content style="padding:0 50px;">
+
+    <div style="background:#fff; padding: 24px; min-height: 800px; "  >
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+  <nz-footer style="text-align: center;">Design ©2018 ck By Angular</nz-footer>
+</nz-layout>

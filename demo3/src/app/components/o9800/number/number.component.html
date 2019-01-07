@@ -1,0 +1,158 @@
+<div>
+  <!-- <button class="left_button" (click)="addOne()"><i class="anticon anticon-plus-square-o"></i><a routerLink="/o9800/number/number_select" routerLinkActive="active">新增单板</a></button> -->
+  <!-- <button class="right_button"><i class="anticon anticon-close-square"></i>清空</button> -->
+  <button nz-button nzType="default"(click)="addOne()" id="btn" nzSize=large> <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>新增单板</button>
+  <button nz-button nzType="default"(click)="AllDelete()" id="btn" style="float:right;"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>清 空</button>
+</div>
+<h4>*所选单板基于产品版本：V100R005C00</h4>
+<div>
+  <nz-table #editRowTable nzBordered [nzData]="dataSet" id='tab'>
+    <thead>
+      <tr>
+        <th nzWidth="20%">型号</th>
+        <th nzWidth="15%">数量</th>
+        <th>典型功耗(W)</th>
+        <th>最大功耗(W)</th>
+        <th>重量(Kg)</th>
+        <th nzWidth="10%">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of editRowTable.data,let in = index">
+        <td>
+          <div class="editable-cell">
+            <div class="editable-cell-text-wrapper">
+                {{data.name}}
+            </div>
+          </div>
+        </td>
+        <td>
+            <button nz-button nzType="default"(click)="plusnumber(in)" id="btn"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>       
+          {{data.number}}
+            <button nz-button nzType="default"(click)="minusnumber(in)" id="btn"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+        </td>
+        <td>{{data.dgh}}</td>
+        <td>{{data.max_gh}}</td>
+        <td>{{data.weight}}</td>
+
+        <td>
+          <nz-popconfirm [nzTitle]="'Sure to delete?'" (nzOnConfirm)="deleteRow(data.id)">
+            <a nz-popconfirm>Delete</a>
+          </nz-popconfirm>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+  <!-- <div id='view_table'>
+    <button (click)='close_viewtable()'>close</button>
+    <nz-table #smallTable nzSize="small" [nzData]="data">
+      <thead>
+        <tr>
+          <th nzWidth="20%">型号</th>
+          <th nzWidth="15%">数量</th>
+          <th>典型功耗(W)</th>
+          <th>最大功耗(W)</th>
+          <th>重量(Kg)</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of editRowTable.data">
+          <td>{{data.name}}</td>
+          <td>{{data.number}} </td>
+          <td>{{data.dgh}}</td>
+          <td>{{data.max_gh}}</td>
+          <td>{{data.weight}}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+    <button (click)='tableToExcel()'>导出到excel</button>
+
+  </div> -->
+</div>
+
+<div>
+  <div style="text-align:center;">
+    <button (click)='calculate()' id="btn1" class="btn btn-danger" style="margin:0 5% auto 10%"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> 计 算</button>
+    <button (click)='tableToExcel()' id="btn2" class="btn btn-default"  style="margin:0 10% auto 0"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>导出配置清单</button>
+  </div>
+  <br><br>
+  <div id='result'>
+    <h1 style="width:100%;text-align:center;color:black;font-weight:900;font-size: 25px">
+      功耗、重量、热耗
+    </h1>
+    <nz-table nzNoResult=" ">
+      <tr>
+
+        <th>典型功耗(W)</th>
+        <th>最大功耗(W)</th>
+        <th>最大热耗(W)</th>
+        <th>重量(Kg)</th>
+
+
+      </tr>
+      <tr>
+        <th>{{c_dgh}}</th>
+        <th>{{c_max_gh}}</th>
+        <th>{{c_weight}}</th>
+        <th>{{c_weight}}</th>
+      </tr>
+    </nz-table>
+  </div>
+  <!-- <div>
+    <button (click)='requestHttp()'>获取远程数据</button>
+    <button (click)='Test01()'>测试数据用</button>
+    
+  </div> -->
+  <!-- <div id="addForm" style="display:none">这是一个控制DIV显示隐藏的控件1111111111111111<button (click)='close()'>关闭</button>
+    <br>
+    <select id="sel">
+      <option value ="1号单板" selected="selected">1号单板</option>    
+      <option value ="2号单板">2号单板</option>
+      <option value="3号单板">3号单板</option>
+      <option value="4号单板">4号单板</option>
+      <option value="5号单板">6号单板</option>
+    </select>
+    <button (click)='addthis()'>点击添加单板数据</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button (click)='addOptions()'>点击获取后台数据</button>
+  </div> -->
+  <div  id="addForm" style="display:none"  >
+    <div id="head"> 新增单板<button (click)='close()' style="float:right" nz-button nzType="default" nzGhost=true><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span></button></div>
+    <br>
+    <div id="mid">
+    <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear  nzShowSearch  nzPlaceHolder="请选择单板........">
+      <nz-option
+      *ngFor="let item of dataSet1,let in = index"
+      [nzLabel]="item.name"
+      [nzValue]="item.name"
+      >
+
+    </nz-option>
+    </nz-select>
+    <br>
+    <br>
+    <br>
+
+    <div id=num style="margin:auto 10% auto auto">数量：
+        <button nz-button nzType="default"(click)="plusnum1()" id="btn"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>    
+      {{num1}}
+      <button nz-button nzType="default"(click)="minusnum1()" id="btn"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <button (click)='addData()' class="btn btn-danger" style="margin:10% 15% auto 30%">确定</button>
+    <button (click)='close()' class="btn btn-default" style="margin:10% 10% auto auto">取消</button>
+    <br>
+  <button (click)='Test01()'>Test</button>
+    
+  </div>
+</div>
